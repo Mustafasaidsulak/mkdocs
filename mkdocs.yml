@@ -1,0 +1,19 @@
+site_name: Docs
+site_url: https://docs.mustafasaidsulak.com/ 
+language: tr
+nav:
+  - Anasayfa: index.md
+  - Kurulumlar: kurulumlar.md
+theme:
+  name: material
+  language: tr
+  palette:
+    scheme: default  # Light modu
+  features:
+    - content.code.copy # Kod bloklarında kopyalama butonu ekler
+
+markdown_extensions:
+  - attr_list 
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
