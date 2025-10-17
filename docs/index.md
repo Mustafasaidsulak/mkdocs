@@ -1,10 +1,11 @@
 # Welcome to MSS Docs
 
-Web sitemi ziyaret etmek için [mustafasaidsulak.com](https://www.mustafasaidsulak.com).
+[mustafasaidsulak.com](https://www.mustafasaidsulak.com)
 
 ## Mevcut Rehberler
 
 * `yolo kurulum` - [Yolo kurulum](kurulumlar.md)
+* `github-yukleme` - [Github'a Dökümantasyonu Yükleme](github-yukleme.md)
 
 
 ## Deneme

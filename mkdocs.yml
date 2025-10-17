@@ -4,6 +4,7 @@ language: tr
 nav:
   - Anasayfa: index.md
   - Kurulumlar: kurulumlar.md
+  - GitHUB Yükleme: github-yukleme.md
 theme:
   name: material
   language: tr
