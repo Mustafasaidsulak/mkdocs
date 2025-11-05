@@ -497,33 +497,33 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">$$V = I \times R$$</td>
+<td style="text-align: left;"><strong>V = I x R</strong></td>
 <td style="text-align: left;"><strong>Ohm Yasası</strong></td>
 <td style="text-align: left;">Gerilim, akım ve direnç arasındaki ilişkiyi kurar.</td>
 </tr>
 <tr>
-<td style="text-align: left;">$$P = V \times I$$</td>
+<td style="text-align: left;"><strong>P = V x I</strong></td>
 <td style="text-align: left;"><strong>Güç (Power)</strong></td>
 <td style="text-align: left;">Birim zamanda yapılan iş (enerji). Cihazın ne kadar hızlı enerji tükettiğini gösterir. (Birim: Watt)</td>
 </tr>
 <tr>
-<td style="text-align: left;">$$E = P \times t$$</td>
+<td style="text-align: left;"><strong>E = P x t</strong></td>
 <td style="text-align: left;"><strong>Enerji (Energy)</strong></td>
 <td style="text-align: left;">Gücün zamanla çarpımı. Bataryada depolanan miktardır. (Birim: Joule veya Watt-saat/Wh)</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong>⚡ Örnek:</strong> Bir motorun $12\text{V}$ gerilimde $5\text{A}$ çektiğini varsayalım.<ul>
-<li><strong>Tüketilen Güç ($P$):</strong> $12\text{V} \times 5\text{A} = \mathbf{60\text{W}}$.</li>
-<li>Bu, motorun her saniye $60$ Joule enerji tükettiği anlamına gelir.</li>
+<li><strong>⚡ Örnek:</strong> Bir motorun 12V gerilimde 5A çektiğini varsayalım.<ul>
+<li><strong>Tüketilen Güç (P):</strong> 12V x 5A = <strong>60W</strong>.</li>
+<li>Bu, motorun her saniye 60 Joule enerji tükettiği anlamına gelir.</li>
 </ul>
 </li>
 </ul>
 <h3 id="12-guc-sistemi-bilesenleri">1.2 Güç Sistemi Bileşenleri</h3>
 <ul>
 <li><strong>Güç Kaynakları:</strong> Bataryalar (ana kaynak), Güneş Panelleri (şarj/destek).</li>
-<li><strong>Güç Dönüştürücüler:</strong> Gerilimi ayarlayan cihazlar (örn: $12\text{V}$ bataryadan $5\text{V}$ kontrol kartına).</li>
+<li><strong>Güç Dönüştürücüler:</strong> Gerilimi ayarlayan cihazlar (örn: 12V bataryadan 5V kontrol kartına).</li>
 <li><strong>Yükler:</strong> Sistemin enerji tüketen kısımları (Motorlar, sensörler, iletişim modülleri).</li>
 </ul>
 <hr />
@@ -553,7 +553,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Kapasite (Ah)</strong></td>
-<td style="text-align: left;">Bataryanın bir saatte verebileceği Amper miktarı. (Örn: $5000\text{mAh}$ batarya, $5\text{A}$ akımı $1$ saat verebilir.)</td>
+<td style="text-align: left;">Bataryanın bir saatte verebileceği Amper miktarı. (Örn: 5000mAh batarya, 5A akımı 1 saat verebilir.)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>C-Değeri (C-Rate)</strong></td>
@@ -561,25 +561,25 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Nominal Gerilim (V)</strong></td>
-<td style="text-align: left;">Li-Po için hücre başına genellikle $\mathbf{3.7\text{V}}$'tur.</td>
+<td style="text-align: left;">Li-Po için hücre başına genellikle <strong>3.7V</strong>'tur.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><strong>⚡ Örnek: C-Değeri Hesaplama</strong><ul>
-<li>Batarya: $5000\text{mAh} (5\text{Ah})$</li>
-<li>C-Değeri: $30\text{C}$ (Maksimum sürekli deşarj hızı)</li>
-<li><strong>Maksimum Çekilebilecek Akım ($I_{\text{max}}$):</strong> Kapasite $\times$ C-Değeri</li>
-<li>$$I_{\text{max}} = 5\text{Ah} \times 30\text{C} = \mathbf{150\text{A}}$$</li>
-<li><em>Yorum:</em> Bu batarya, motorlara anlık olarak $150\text{A}$'e kadar sürekli akım sağlayabilir. İHA'nın kalkışı için bu değer hayati önem taşır.</li>
+<li>Batarya: 5000mAh (5Ah)</li>
+<li>C-Değeri: 30C (Maksimum sürekli deşarj hızı)</li>
+<li><strong>Maksimum Çekilebilecek Akım (I_max):</strong> Kapasite x C-Değeri</li>
+<li><strong>I_max</strong> = 5Ah x 30C = <strong>150A</strong></li>
+<li><em>Yorum:</em> Bu batarya, motorlara anlık olarak 150A'e kadar sürekli akım sağlayabilir. İHA'nın kalkışı için bu değer hayati önem taşır.</li>
 </ul>
 </li>
 </ul>
 <h3 id="23-batarya-paketleme-ve-konfigurasyonlar">2.3 Batarya Paketleme ve Konfigürasyonlar</h3>
 <p>Lityum piller, hücrelerin seri (S) ve paralel (P) bağlanmasıyla paketlenir.</p>
 <ul>
-<li><strong>Seri Bağlantı ($S$):</strong> Gerilimi artırır. ($$V_{\text{toplam}} = V_{\text{hücre}} \times S$$)</li>
-<li><strong>Paralel Bağlantı ($P$):</strong> Kapasiteyi artırır. ($$Ah_{\text{toplam}} = Ah_{\text{hücre}} \times P$$)</li>
+<li><strong>Seri Bağlantı (S):</strong> Gerilimi artırır. (V_toplam = V_hücre x S)</li>
+<li><strong>Paralel Bağlantı (P):</strong> Kapasiteyi artırır. (Ah_toplam = Ah_hücre x P)</li>
 </ul>
 <table>
 <thead>
@@ -587,23 +587,23 @@
 <th style="text-align: left;">Konfigürasyon</th>
 <th style="text-align: left;">Hücre Sayısı</th>
 <th style="text-align: left;">Gerilim (Nominal)</th>
-<th style="text-align: left;">Kapasite (Hücre $2\text{Ah}$ ise)</th>
+<th style="text-align: left;">Kapasite (Hücre 2Ah ise)</th>
 <th style="text-align: left;">Uygulama</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>$3S1P$ (3S)</strong></td>
+<td style="text-align: left;"><strong>3S1P (3S)</strong></td>
 <td style="text-align: left;">3</td>
-<td style="text-align: left;">$3 \times 3.7\text{V} = \mathbf{11.1\text{V}}$</td>
-<td style="text-align: left;">$1 \times 2\text{Ah} = 2\text{Ah}$</td>
+<td style="text-align: left;">3 x 3.7V = <strong>11.1V</strong></td>
+<td style="text-align: left;">1 x 2Ah = 2Ah</td>
 <td style="text-align: left;">Küçük robotlar, sabit kanatlı İHA.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>$6S2P$</strong></td>
-<td style="text-align: left;">$6 \times 2 = 12$</td>
-<td style="text-align: left;">$6 \times 3.7\text{V} = \mathbf{22.2\text{V}}$</td>
-<td style="text-align: left;">$2 \times 2\text{Ah} = 4\text{Ah}$</td>
+<td style="text-align: left;"><strong>6S2P</strong></td>
+<td style="text-align: left;">6 x 2 = 12</td>
+<td style="text-align: left;">6 x 3.7V = <strong>22.2V</strong></td>
+<td style="text-align: left;">2 x 2Ah = 4Ah</td>
 <td style="text-align: left;">Güçlü dronelar, orta ölçekli roket aviyonikleri.</td>
 </tr>
 </tbody>
@@ -615,7 +615,7 @@
 <p>Mobil sistemlerde en çok kullanılan dönüştürücülerdir.</p>
 <ul>
 <li><strong>Buck (Düşürücü):</strong> Yüksek DC gerilimi, daha düşük bir DC gerilime dönüştürür.<ul>
-<li><em>Örn:</em> $22.2\text{V}$ bataryadan, kontrol kartı için $5\text{V}$'a düşürme.</li>
+<li><em>Örn:</em> 22.2V bataryadan, kontrol kartı için 5V'a düşürme.</li>
 </ul>
 </li>
 <li><strong>Boost (Yükseltici):</strong> Düşük DC gerilimi, daha yüksek bir DC gerilime dönüştürür.<ul>
@@ -632,17 +632,17 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Verimlilik ($\eta$ - Efficiency)</strong></td>
-<td style="text-align: left;">Kayıpsız güç aktarımının ölçüsü. $$\eta = \frac{P_{\text{Çıkış}}}{P_{\text{Giriş}}} \times 100$$</td>
+<td style="text-align: left;"><strong>Verimlilik (η - Efficiency)</strong></td>
+<td style="text-align: left;">Kayıpsız güç aktarımının ölçüsü. η = (P_Çıkış / P_Giriş) x 100</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><strong>⚡ Örnek: Verimlilik Hesaplama</strong><ul>
-<li>Giriş Gücü ($P_{\text{Giriş}}$): $10\text{W}$</li>
-<li>Çıkış Gücü ($P_{\text{Çıkış}}$): $8.5\text{W}$</li>
-<li><strong>Verimlilik ($\eta$):</strong> $$(8.5\text{W} / 10\text{W}) \times 100 = \mathbf{85\%}$$</li>
-<li><em>Yorum:</em> Kalan $1.5\text{W}$ enerji, ısı olarak kaybolur. Verimlilik ne kadar yüksek olursa, batarya ömrü o kadar uzun olur!</li>
+<li>Giriş Gücü (P_Giriş): 10W</li>
+<li>Çıkış Gücü (P_Çıkış): 8.5W</li>
+<li><strong>Verimlilik (η):</strong> (8.5W / 10W) x 100 = <strong>85%</strong></li>
+<li><em>Yorum:</em> Kalan 1.5W enerji, ısı olarak kaybolur. Verimlilik ne kadar yüksek olursa, batarya ömrü o kadar uzun olur!</li>
 </ul>
 </li>
 </ul>
@@ -677,40 +677,40 @@
 <tr>
 <td style="text-align: left;"><strong>İtiş (4 Motor)</strong></td>
 <td style="text-align: left;">Kalkış (Max)</td>
-<td style="text-align: left;">$22.2\text{V}$</td>
-<td style="text-align: left;">$4 \times 25\text{A}$</td>
-<td style="text-align: left;">$\mathbf{2220\text{W}}$</td>
+<td style="text-align: left;">22.2V</td>
+<td style="text-align: left;">4 x 25A</td>
+<td style="text-align: left;"><strong>2220W</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Uçuş Kontrolcü</strong></td>
 <td style="text-align: left;">Sabit</td>
-<td style="text-align: left;">$5\text{V}$</td>
-<td style="text-align: left;">$0.5\text{A}$</td>
-<td style="text-align: left;">$2.5\text{W}$</td>
+<td style="text-align: left;">5V</td>
+<td style="text-align: left;">0.5A</td>
+<td style="text-align: left;">2.5W</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Telemetri / İletişim</strong></td>
 <td style="text-align: left;">Sabit</td>
-<td style="text-align: left;">$12\text{V}$</td>
-<td style="text-align: left;">$0.8\text{A}$</td>
-<td style="text-align: left;">$9.6\text{W}$</td>
+<td style="text-align: left;">12V</td>
+<td style="text-align: left;">0.8A</td>
+<td style="text-align: left;">9.6W</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Toplam Maksimum Güç:</strong></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">$\mathbf{2232.1\text{W}}$</td>
+<td style="text-align: left;"><strong>2232.1W</strong></td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><strong>⚡ Uygulama Örneği: Uçuş Süresi Hesaplama</strong><ul>
-<li>Batarya: $6S$ ($22.2\text{V}$), $8000\text{mAh} (8\text{Ah})$</li>
-<li><strong>Enerji Kapasitesi ($Wh$):</strong> $22.2\text{V} \times 8\text{Ah} = \mathbf{177.6\text{Wh}}$</li>
-<li>Ortalama Seyir Gücü ($P_{\text{Ort}}$): $400\text{W}$</li>
-<li><strong>Tahmini Uçuş Süresi:</strong> $$\text{Süre} (\text{saat}) = \frac{\text{Enerji Kapasitesi} (\text{Wh})}{\text{Ortalama Güç} (\text{W})} = \frac{177.6}{400} \approx \mathbf{0.444\text{ saat}}$$</li>
-<li>$$0.444\text{ saat} \times 60 \approx \mathbf{26.6 \text{ dakika}}$$</li>
+<li>Batarya: 6S (22.2V), 8000mAh (8Ah)</li>
+<li><strong>Enerji Kapasitesi (Wh):</strong> 22.2V x 8Ah = <strong>177.6Wh</strong></li>
+<li>Ortalama Seyir Gücü (P_Ort): 400W</li>
+<li><strong>Tahmini Uçuş Süresi:</strong> Süre (saat) = Enerji Kapasitesi (Wh) / Ortalama Güç (W) = 177.6 / 400 ≈ <strong>0.444 saat</strong></li>
+<li>0.444 saat x 60 ≈ <strong>26.6 dakika</strong></li>
 <li><em>Not:</em> Güvenlik marjı (yedek enerji) bırakılmalıdır.</li>
 </ul>
 </li>
@@ -728,7 +728,7 @@
 <li><strong>Önlem:</strong> Her zaman BMS kullanın ve fiziksel darbelere karşı koruyun.</li>
 </ul>
 </li>
-<li><strong>Depolama Gerilimi:</strong> Li-Po bataryalar, uzun süre saklanırken hücre başına $\mathbf{3.8\text{V}}$ - $\mathbf{3.85\text{V}}$ aralığında tutulmalıdır. (Tam şarjlı depolama, bataryayı hızla yıpratır ve yangın riskini artırır.)</li>
+<li><strong>Depolama Gerilimi:</strong> Li-Po bataryalar, uzun süre saklanırken hücre başına <strong>3.8V - 3.85V</strong> aralığında tutulmalıdır. (Tam şarjlı depolama, bataryayı hızla yıpratır ve yangın riskini artırır.)</li>
 <li><strong>Sigortalar ve Koruma Devreleri:</strong> Kısa devre anında sistemi ve bataryayı korumak için uygun akım değerinde sigortalar kullanılmalıdır.</li>
 </ul>
 <h3 id="52-gelecek-trendleri">5.2 Gelecek Trendleri</h3>
@@ -736,7 +736,6 @@
 <li><strong>Katı Hal (Solid-State) Bataryalar:</strong> Daha güvenli, daha yüksek enerji yoğunluğuna sahip ve daha hızlı şarj edilebilen yeni nesil bataryalardır.</li>
 <li><strong>Hızlı Şarj Teknolojileri:</strong> Görevler arası bekleme süresini azaltmak için şarj sürelerinin dakikalara indirilmesi.</li>
 </ul>
-<hr />
 
 
 
