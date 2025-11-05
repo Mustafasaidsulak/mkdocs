@@ -1,0 +1,795 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.mustafasaidsulak.com/guc/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>🔋 Elektronik Güç Sistemleri: Robotlar, İHA'lar ve Roketler İçin Yaşam Kaynağı - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default- #-Light-modu" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elektronik-guc-sistemleri-robotlar-ihalar-ve-roketler-icin-yasam-kaynag" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href=".." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔋 Elektronik Güç Sistemleri: Robotlar, İHA'lar ve Roketler İçin Yaşam Kaynağı
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anasayfa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kurulumlar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kurulumlar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-yukleme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHUB Yükleme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bolum-1-guc-sistemlerine-giris-ve-temel-kavramlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Bölüm 1: Güç Sistemlerine Giriş ve Temel Kavramlar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Bölüm 1: Güç Sistemlerine Giriş ve Temel Kavramlar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-temel-elektrik-prensipleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Temel Elektrik Prensipleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-guc-sistemi-bilesenleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Güç Sistemi Bileşenleri
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bolum-2-batarya-teknolojileri-ve-mimarileri" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔋 Bölüm 2: Batarya Teknolojileri ve Mimarileri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔋 Bölüm 2: Batarya Teknolojileri ve Mimarileri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-batarya-kimyalar-ve-karslastrmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Batarya Kimyaları ve Karşılaştırması
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-batarya-parametreleri-kritik-metrikler" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Batarya Parametreleri: Kritik Metrikler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-batarya-paketleme-ve-konfigurasyonlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Batarya Paketleme ve Konfigürasyonlar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bolum-3-guc-yonetimi-ve-donusumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Bölüm 3: Güç Yönetimi ve Dönüşümü
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Bölüm 3: Güç Yönetimi ve Dönüşümü">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-dc-dc-donusturuculer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 DC-DC Dönüştürücüler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-batarya-yonetim-sistemleri-bms" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Batarya Yönetim Sistemleri (BMS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bolum-4-uygulamaya-ozel-tasarm" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Bölüm 4: Uygulamaya Özel Tasarım
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Bölüm 4: Uygulamaya Özel Tasarım">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-guc-butcesi-ve-yuk-analizi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Güç Bütçesi ve Yük Analizi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-guc-sistemi-tasarm-kararlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Güç Sistemi Tasarım Kararları
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bolum-5-guvenlik-bakm-ve-gelecek-trendleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Bölüm 5: Güvenlik, Bakım ve Gelecek Trendleri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 Bölüm 5: Güvenlik, Bakım ve Gelecek Trendleri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-guvenlik-ve-risk-yonetimi-asla-ihmal-etmeyin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Güvenlik ve Risk Yönetimi (Asla İhmal Etmeyin!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-gelecek-trendleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Gelecek Trendleri
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="elektronik-guc-sistemleri-robotlar-ihalar-ve-roketler-icin-yasam-kaynag">🔋 Elektronik Güç Sistemleri: Robotlar, İHA'lar ve Roketler İçin Yaşam Kaynağı</h1>
+<blockquote>
+<p>Bu rehber, bir robotun, İHA'nın veya roketin beyni olan elektronik aksamına hayat veren temel güç sistemlerini, batarya teknolojilerini ve güç yönetim stratejilerini anlamanız için hazırlandı. Güç sistemleri, <strong>hız, menzil ve görev başarısının</strong> anahtarıdır!</p>
+</blockquote>
+<hr />
+<h2 id="bolum-1-guc-sistemlerine-giris-ve-temel-kavramlar">⚡ Bölüm 1: Güç Sistemlerine Giriş ve Temel Kavramlar</h2>
+<h3 id="11-temel-elektrik-prensipleri">1.1 Temel Elektrik Prensipleri</h3>
+<ul>
+<li><strong>Gerilim (Voltage - V):</strong> Devredeki elektronları hareket ettiren "basınç" veya "kuvvet". (Birim: Volt)</li>
+<li><strong>Akım (Current - I):</strong> Elektronların bir noktadan akış hızı. Enerjinin taşıyıcısıdır. (Birim: Amper)</li>
+<li><strong>Direnç (Resistance - R):</strong> Akıma karşı koyma yeteneği. Kayıplara neden olur. (Birim: Ohm)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Formül</th>
+<th style="text-align: left;">Adı</th>
+<th style="text-align: left;">Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$$V = I \times R$$</td>
+<td style="text-align: left;"><strong>Ohm Yasası</strong></td>
+<td style="text-align: left;">Gerilim, akım ve direnç arasındaki ilişkiyi kurar.</td>
+</tr>
+<tr>
+<td style="text-align: left;">$$P = V \times I$$</td>
+<td style="text-align: left;"><strong>Güç (Power)</strong></td>
+<td style="text-align: left;">Birim zamanda yapılan iş (enerji). Cihazın ne kadar hızlı enerji tükettiğini gösterir. (Birim: Watt)</td>
+</tr>
+<tr>
+<td style="text-align: left;">$$E = P \times t$$</td>
+<td style="text-align: left;"><strong>Enerji (Energy)</strong></td>
+<td style="text-align: left;">Gücün zamanla çarpımı. Bataryada depolanan miktardır. (Birim: Joule veya Watt-saat/Wh)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>⚡ Örnek:</strong> Bir motorun $12\text{V}$ gerilimde $5\text{A}$ çektiğini varsayalım.<ul>
+<li><strong>Tüketilen Güç ($P$):</strong> $12\text{V} \times 5\text{A} = \mathbf{60\text{W}}$.</li>
+<li>Bu, motorun her saniye $60$ Joule enerji tükettiği anlamına gelir.</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-guc-sistemi-bilesenleri">1.2 Güç Sistemi Bileşenleri</h3>
+<ul>
+<li><strong>Güç Kaynakları:</strong> Bataryalar (ana kaynak), Güneş Panelleri (şarj/destek).</li>
+<li><strong>Güç Dönüştürücüler:</strong> Gerilimi ayarlayan cihazlar (örn: $12\text{V}$ bataryadan $5\text{V}$ kontrol kartına).</li>
+<li><strong>Yükler:</strong> Sistemin enerji tüketen kısımları (Motorlar, sensörler, iletişim modülleri).</li>
+</ul>
+<hr />
+<h2 id="bolum-2-batarya-teknolojileri-ve-mimarileri">🔋 Bölüm 2: Batarya Teknolojileri ve Mimarileri</h2>
+<p>Bataryalar, mobil sistemlerin kalbi ve en büyük tasarım kısıtlayıcısıdır.</p>
+<h3 id="21-batarya-kimyalar-ve-karslastrmas">2.1 Batarya Kimyaları ve Karşılaştırması</h3>
+<ul>
+<li><strong>Li-Po / Li-ion (Lityum Polimer / Lityum İyon):</strong><ul>
+<li><strong>Avantaj:</strong> Yüksek <strong>Enerji Yoğunluğu</strong> (Wh/kg) ve yüksek <strong>Güç Yoğunluğu</strong> (W/kg). Yani, hem hafifler hem de ani yüksek akım verebilirler (İHA motorları için kritik).</li>
+<li><strong>Kullanım:</strong> İHA, robotik, roket aviyonikleri.</li>
+</ul>
+</li>
+<li><strong>NiMH / Kurşun Asit:</strong><ul>
+<li><strong>Dezavantaj:</strong> Li-Po'ya göre daha ağır ve daha düşük akım kapasitesine sahiptirler.</li>
+<li><strong>Kullanım:</strong> Genellikle daha büyük/sabit sistemlerde veya düşük maliyetli robot projelerinde.</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-batarya-parametreleri-kritik-metrikler">2.2 Batarya Parametreleri: Kritik Metrikler</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parametre</th>
+<th style="text-align: left;">Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Kapasite (Ah)</strong></td>
+<td style="text-align: left;">Bataryanın bir saatte verebileceği Amper miktarı. (Örn: $5000\text{mAh}$ batarya, $5\text{A}$ akımı $1$ saat verebilir.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C-Değeri (C-Rate)</strong></td>
+<td style="text-align: left;">Bataryanın güvenli bir şekilde deşarj (akım çekme) hızını kapasitesine göre ifade eder. (Kritik!)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nominal Gerilim (V)</strong></td>
+<td style="text-align: left;">Li-Po için hücre başına genellikle $\mathbf{3.7\text{V}}$'tur.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>⚡ Örnek: C-Değeri Hesaplama</strong><ul>
+<li>Batarya: $5000\text{mAh} (5\text{Ah})$</li>
+<li>C-Değeri: $30\text{C}$ (Maksimum sürekli deşarj hızı)</li>
+<li><strong>Maksimum Çekilebilecek Akım ($I_{\text{max}}$):</strong> Kapasite $\times$ C-Değeri</li>
+<li>$$I_{\text{max}} = 5\text{Ah} \times 30\text{C} = \mathbf{150\text{A}}$$</li>
+<li><em>Yorum:</em> Bu batarya, motorlara anlık olarak $150\text{A}$'e kadar sürekli akım sağlayabilir. İHA'nın kalkışı için bu değer hayati önem taşır.</li>
+</ul>
+</li>
+</ul>
+<h3 id="23-batarya-paketleme-ve-konfigurasyonlar">2.3 Batarya Paketleme ve Konfigürasyonlar</h3>
+<p>Lityum piller, hücrelerin seri (S) ve paralel (P) bağlanmasıyla paketlenir.</p>
+<ul>
+<li><strong>Seri Bağlantı ($S$):</strong> Gerilimi artırır. ($$V_{\text{toplam}} = V_{\text{hücre}} \times S$$)</li>
+<li><strong>Paralel Bağlantı ($P$):</strong> Kapasiteyi artırır. ($$Ah_{\text{toplam}} = Ah_{\text{hücre}} \times P$$)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Konfigürasyon</th>
+<th style="text-align: left;">Hücre Sayısı</th>
+<th style="text-align: left;">Gerilim (Nominal)</th>
+<th style="text-align: left;">Kapasite (Hücre $2\text{Ah}$ ise)</th>
+<th style="text-align: left;">Uygulama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>$3S1P$ (3S)</strong></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">$3 \times 3.7\text{V} = \mathbf{11.1\text{V}}$</td>
+<td style="text-align: left;">$1 \times 2\text{Ah} = 2\text{Ah}$</td>
+<td style="text-align: left;">Küçük robotlar, sabit kanatlı İHA.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$6S2P$</strong></td>
+<td style="text-align: left;">$6 \times 2 = 12$</td>
+<td style="text-align: left;">$6 \times 3.7\text{V} = \mathbf{22.2\text{V}}$</td>
+<td style="text-align: left;">$2 \times 2\text{Ah} = 4\text{Ah}$</td>
+<td style="text-align: left;">Güçlü dronelar, orta ölçekli roket aviyonikleri.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="bolum-3-guc-yonetimi-ve-donusumu">🧠 Bölüm 3: Güç Yönetimi ve Dönüşümü</h2>
+<p>Gücün bataryadan alınıp, sistemin diğer kısımlarına uygun şekilde dağıtılması sanatıdır.</p>
+<h3 id="31-dc-dc-donusturuculer">3.1 DC-DC Dönüştürücüler</h3>
+<p>Mobil sistemlerde en çok kullanılan dönüştürücülerdir.</p>
+<ul>
+<li><strong>Buck (Düşürücü):</strong> Yüksek DC gerilimi, daha düşük bir DC gerilime dönüştürür.<ul>
+<li><em>Örn:</em> $22.2\text{V}$ bataryadan, kontrol kartı için $5\text{V}$'a düşürme.</li>
+</ul>
+</li>
+<li><strong>Boost (Yükseltici):</strong> Düşük DC gerilimi, daha yüksek bir DC gerilime dönüştürür.<ul>
+<li><em>Örn:</em> Batarya gerilimi düşmeye başladığında, kritik bir bileşeni beslemek için gerilimi sabit tutma.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Kavram</th>
+<th style="text-align: left;">Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Verimlilik ($\eta$ - Efficiency)</strong></td>
+<td style="text-align: left;">Kayıpsız güç aktarımının ölçüsü. $$\eta = \frac{P_{\text{Çıkış}}}{P_{\text{Giriş}}} \times 100$$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>⚡ Örnek: Verimlilik Hesaplama</strong><ul>
+<li>Giriş Gücü ($P_{\text{Giriş}}$): $10\text{W}$</li>
+<li>Çıkış Gücü ($P_{\text{Çıkış}}$): $8.5\text{W}$</li>
+<li><strong>Verimlilik ($\eta$):</strong> $$(8.5\text{W} / 10\text{W}) \times 100 = \mathbf{85\%}$$</li>
+<li><em>Yorum:</em> Kalan $1.5\text{W}$ enerji, ısı olarak kaybolur. Verimlilik ne kadar yüksek olursa, batarya ömrü o kadar uzun olur!</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-batarya-yonetim-sistemleri-bms">3.2 Batarya Yönetim Sistemleri (BMS)</h3>
+<p>Bataryanın uzun ömürlü ve güvenli çalışmasını sağlayan akıllı devrelerdir.</p>
+<ul>
+<li><strong>Görevi:</strong><ol>
+<li><strong>Aşırı Gerilim Koruması:</strong> Bataryanın çok fazla şarj olmasını engeller.</li>
+<li><strong>Aşırı Deşarj Koruması:</strong> Bataryanın tamamen boşalmasını engeller (Li-ion/Li-Po için hayati!).</li>
+<li><strong>Hücre Dengeleme (Balancing):</strong> Batarya paketindeki her hücrenin aynı gerilimde kalmasını sağlar. (Aksi takdirde, en zayıf hücre tüm paketi öldürür.)</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="bolum-4-uygulamaya-ozel-tasarm">🎯 Bölüm 4: Uygulamaya Özel Tasarım</h2>
+<h3 id="41-guc-butcesi-ve-yuk-analizi">4.1 Güç Bütçesi ve Yük Analizi</h3>
+<p>Herhangi bir mobil sistemin (İHA, robot) tasarımında atılacak <strong>ilk adımdır.</strong></p>
+<ul>
+<li><strong>Tanım:</strong> Sistemin tüm bileşenlerinin (motorlar, kontrolcüler, sensörler, iletişim) maksimum ve ortalama güç tüketiminin detaylı listesidir.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bileşen</th>
+<th style="text-align: left;">Çalışma Modu</th>
+<th style="text-align: left;">Gerilim (V)</th>
+<th style="text-align: left;">Akım (A)</th>
+<th style="text-align: left;">Güç (W) = V x I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>İtiş (4 Motor)</strong></td>
+<td style="text-align: left;">Kalkış (Max)</td>
+<td style="text-align: left;">$22.2\text{V}$</td>
+<td style="text-align: left;">$4 \times 25\text{A}$</td>
+<td style="text-align: left;">$\mathbf{2220\text{W}}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Uçuş Kontrolcü</strong></td>
+<td style="text-align: left;">Sabit</td>
+<td style="text-align: left;">$5\text{V}$</td>
+<td style="text-align: left;">$0.5\text{A}$</td>
+<td style="text-align: left;">$2.5\text{W}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Telemetri / İletişim</strong></td>
+<td style="text-align: left;">Sabit</td>
+<td style="text-align: left;">$12\text{V}$</td>
+<td style="text-align: left;">$0.8\text{A}$</td>
+<td style="text-align: left;">$9.6\text{W}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Toplam Maksimum Güç:</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">$\mathbf{2232.1\text{W}}$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>⚡ Uygulama Örneği: Uçuş Süresi Hesaplama</strong><ul>
+<li>Batarya: $6S$ ($22.2\text{V}$), $8000\text{mAh} (8\text{Ah})$</li>
+<li><strong>Enerji Kapasitesi ($Wh$):</strong> $22.2\text{V} \times 8\text{Ah} = \mathbf{177.6\text{Wh}}$</li>
+<li>Ortalama Seyir Gücü ($P_{\text{Ort}}$): $400\text{W}$</li>
+<li><strong>Tahmini Uçuş Süresi:</strong> $$\text{Süre} (\text{saat}) = \frac{\text{Enerji Kapasitesi} (\text{Wh})}{\text{Ortalama Güç} (\text{W})} = \frac{177.6}{400} \approx \mathbf{0.444\text{ saat}}$$</li>
+<li>$$0.444\text{ saat} \times 60 \approx \mathbf{26.6 \text{ dakika}}$$</li>
+<li><em>Not:</em> Güvenlik marjı (yedek enerji) bırakılmalıdır.</li>
+</ul>
+</li>
+</ul>
+<h3 id="42-guc-sistemi-tasarm-kararlar">4.2 Güç Sistemi Tasarım Kararları</h3>
+<ul>
+<li><strong>Ağırlık vs. Performans:</strong> Batarya seçimi, uçan sistemlerde doğrudan taşıma kapasitesini ve menzili etkiler. (Daha yüksek Wh/kg her zaman tercih edilir.)</li>
+<li><strong>Yedeklilik (Redundancy):</strong> Kritik sistemlerde (roket aviyonikleri, büyük İHA'lar) birden fazla bağımsız güç kaynağı bulundurmak, tek bir arızadan dolayı sistemin çökmesini engeller.</li>
+</ul>
+<hr />
+<h2 id="bolum-5-guvenlik-bakm-ve-gelecek-trendleri">🔒 Bölüm 5: Güvenlik, Bakım ve Gelecek Trendleri</h2>
+<h3 id="51-guvenlik-ve-risk-yonetimi-asla-ihmal-etmeyin">5.1 Güvenlik ve Risk Yönetimi (Asla İhmal Etmeyin!)</h3>
+<ul>
+<li><strong>Termal Kaçak (Thermal Runaway):</strong> Li-Po bataryanın aşırı ısınma, delinme veya aşırı şarj/deşarj sonucu kontrolsüz ısı üretmesi ve yanması.<ul>
+<li><strong>Önlem:</strong> Her zaman BMS kullanın ve fiziksel darbelere karşı koruyun.</li>
+</ul>
+</li>
+<li><strong>Depolama Gerilimi:</strong> Li-Po bataryalar, uzun süre saklanırken hücre başına $\mathbf{3.8\text{V}}$ - $\mathbf{3.85\text{V}}$ aralığında tutulmalıdır. (Tam şarjlı depolama, bataryayı hızla yıpratır ve yangın riskini artırır.)</li>
+<li><strong>Sigortalar ve Koruma Devreleri:</strong> Kısa devre anında sistemi ve bataryayı korumak için uygun akım değerinde sigortalar kullanılmalıdır.</li>
+</ul>
+<h3 id="52-gelecek-trendleri">5.2 Gelecek Trendleri</h3>
+<ul>
+<li><strong>Katı Hal (Solid-State) Bataryalar:</strong> Daha güvenli, daha yüksek enerji yoğunluğuna sahip ve daha hızlı şarj edilebilen yeni nesil bataryalardır.</li>
+<li><strong>Hızlı Şarj Teknolojileri:</strong> Görevler arası bekleme süresini azaltmak için şarj sürelerinin dakikalara indirilmesi.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
