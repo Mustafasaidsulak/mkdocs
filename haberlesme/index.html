@@ -1,0 +1,690 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.mustafasaidsulak.com/haberlesme/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>📚 Gömülü Sistemler Haberleşme Protokolleri: I2C, SPI ve UART Eğitimi - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default- #-Light-modu" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gomulu-sistemler-haberlesme-protokolleri-i2c-spi-ve-uart-egitimi" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href=".." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📚 Gömülü Sistemler Haberleşme Protokolleri: I2C, SPI ve UART Eğitimi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anasayfa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kurulumlar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kurulumlar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-yukleme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHUB Yükleme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#giris-protokollerin-onemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giriş: Protokollerin Önemi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-i2c-inter-integrated-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. I²C (Inter-Integrated Circuit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. I²C (Inter-Integrated Circuit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temel-ozellikler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temel Özellikler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinler-ve-gorevleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinler ve Görevleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kullanm-alanlar-ve-ornekler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanım Alanları ve Örnekler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-spi-serial-peripheral-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. SPI (Serial Peripheral Interface) ⚡
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SPI (Serial Peripheral Interface) ⚡">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temel-ozellikler_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temel Özellikler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinler-ve-gorevleri_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinler ve Görevleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kullanm-alanlar-ve-ornekler_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanım Alanları ve Örnekler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-uart-universal-asynchronous-receivertransmitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. UART (Universal Asynchronous Receiver/Transmitter)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. UART (Universal Asynchronous Receiver/Transmitter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temel-ozellikler_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temel Özellikler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinler-ve-gorevleri_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinler ve Görevleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kullanm-alanlar-ve-ornekler_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanım Alanları ve Örnekler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-protokollerin-karslastrmal-ozeti" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Protokollerin Karşılaştırmalı Özeti ⚖️
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gomulu-sistemler-haberlesme-protokolleri-i2c-spi-ve-uart-egitimi">📚 Gömülü Sistemler Haberleşme Protokolleri: I2C, SPI ve UART Eğitimi</h1>
+<h2 id="giris-protokollerin-onemi">Giriş: Protokollerin Önemi</h2>
+<p>Gömülü sistemlerdeki <strong>mikrodenetleyiciler</strong> (işlemci kartlar) ve <strong>çevresel aygıtlar</strong> (sensörler, bellekler, modüller) arasındaki veri alışverişini düzenleyen kurallar bütününe <strong>haberleşme protokolü</strong> denir. Doğru protokol seçimi, sistemin hızı, karmaşıklığı ve güç tüketimi açısından kritiktir.</p>
+<hr />
+<h2 id="1-i2c-inter-integrated-circuit">1. I²C (Inter-Integrated Circuit)</h2>
+<p>I²C, Philips tarafından geliştirilmiş, iki kablolu, senkronize, seri haberleşme protokolüdür.</p>
+<h3 id="temel-ozellikler">Temel Özellikler</h3>
+<ul>
+<li><strong>Topoloji:</strong> Multi-Master, Multi-Slave. Tek bir hatta birden çok Master ve Slave bulunabilir.</li>
+<li><strong>Haberleşme:</strong> Yarı Çift Yönlü (<strong>Half-Duplex</strong>). Veri akışı tek yönlüdür (gönderme veya alma).</li>
+<li><strong>Adresleme:</strong> Her Slave cihazın benzersiz bir 7-bit (veya 10-bit) adresi vardır. Master, iletişime başlamak için bu adresi kullanır.</li>
+<li><strong>Hız:</strong> Orta. Genellikle 100 kHz (Standart) veya 400 kHz (Hızlı Mod) kullanılır.</li>
+</ul>
+<h3 id="pinler-ve-gorevleri">Pinler ve Görevleri</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pin</th>
+<th style="text-align: left;">Görev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SCL</strong></td>
+<td style="text-align: left;"><strong>S</strong>erial <strong>CL</strong>ock (Seri Saat). Master tarafından üretilen saat sinyalini taşır.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SDA</strong></td>
+<td style="text-align: left;"><strong>S</strong>erial <strong>DA</strong>ta (Seri Veri). Veri gönderme ve alma için kullanılan çift yönlü hattır.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kullanm-alanlar-ve-ornekler">Kullanım Alanları ve Örnekler</h3>
+<ul>
+<li>Aynı PCB üzerindeki <strong>kısa mesafeli</strong> ve <strong>orta hızlı</strong> çevresel aygıtlar.</li>
+<li><strong>Örnek Sensörler/Modüller:</strong><ul>
+<li><strong>BMP388:</strong> Yüksek hassasiyetli barometrik basınç ve sıcaklık sensörü.</li>
+<li><strong>MPU6050:</strong> 6 Eksenli ivmeölçer ve jiroskop.</li>
+<li>EEPROM bellekler, RTC (Gerçek Zamanlı Saat) modülleri.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="2-spi-serial-peripheral-interface">2. SPI (Serial Peripheral Interface) ⚡</h2>
+<p>SPI, Motorola tarafından geliştirilmiş, dört kablolu, senkronize, tam çift yönlü seri haberleşme protokolüdür.</p>
+<h3 id="temel-ozellikler_1">Temel Özellikler</h3>
+<ul>
+<li><strong>Topoloji:</strong> Single-Master, Multi-Slave. Birden çok Slave cihaza bağlanabilir, ancak her biri için ayrı bir Seçim Pini (CS) gerekir.</li>
+<li><strong>Haberleşme:</strong> Tam Çift Yönlü (<strong>Full-Duplex</strong>). Veri gönderme ve alma aynı anda gerçekleşebilir.</li>
+<li><strong>Adresleme:</strong> Yok. İletişim, Master tarafından seçilen Slave'in <strong>CS</strong> (Chip Select) pini kullanılarak yönlendirilir.</li>
+<li><strong>Hız:</strong> <strong>En Hızlı</strong>. Teorik olarak sınırlıdır ve pratikte MHz mertebesinde çok yüksek hızlara ulaşabilir.</li>
+</ul>
+<h3 id="pinler-ve-gorevleri_1">Pinler ve Görevleri</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pin</th>
+<th style="text-align: left;">Açılım</th>
+<th style="text-align: left;">Görev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SCK</strong></td>
+<td style="text-align: left;"><strong>S</strong>erial <strong>C</strong>loc<strong>k</strong></td>
+<td style="text-align: left;">Saat sinyalini taşır (Master üretir).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MOSI</strong></td>
+<td style="text-align: left;"><strong>M</strong>aster <strong>O</strong>ut, <strong>S</strong>lave <strong>I</strong>n</td>
+<td style="text-align: left;">Master'dan Slave'e veri aktarımı.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MISO</strong></td>
+<td style="text-align: left;"><strong>M</strong>aster <strong>I</strong>n, <strong>S</strong>lave <strong>O</strong>ut</td>
+<td style="text-align: left;">Slave'den Master'a veri aktarımı.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SS/CS</strong></td>
+<td style="text-align: left;"><strong>S</strong>lave <strong>S</strong>elect / <strong>C</strong>hip <strong>S</strong>elect</td>
+<td style="text-align: left;">Master'ın hangi Slave ile konuşacağını seçer (aktif düşük).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kullanm-alanlar-ve-ornekler_1">Kullanım Alanları ve Örnekler</h3>
+<ul>
+<li><strong>Yüksek hızlı</strong> veri transferi gerektiren aygıtlar.</li>
+<li><strong>Örnek Sensörler/Modüller:</strong><ul>
+<li><strong>SD Kart Okuyucu:</strong> Yüksek hızda bellek erişimi için.</li>
+<li><strong>SPI Flash Modülleri:</strong> Harici depolama birimleri.</li>
+<li>Grafik ekranlar (TFT/OLED), Yüksek hızlı ADC (Analogdan Dijitale Dönüştürücü) çipleri.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="3-uart-universal-asynchronous-receivertransmitter">3. UART (Universal Asynchronous Receiver/Transmitter)</h2>
+<p>UART, herhangi bir harici saat sinyali olmadan (eşzamansız) veri iletimi sağlayan donanım devresidir.</p>
+<h3 id="temel-ozellikler_2">Temel Özellikler</h3>
+<ul>
+<li><strong>Topoloji:</strong> Noktadan Noktaya (<strong>Point-to-Point</strong>). Genellikle sadece iki cihaz arasında kullanılır.</li>
+<li><strong>Haberleşme:</strong> Eşzamansız (<strong>Asynchronous</strong>). Veri alıcısı ve göndericisi önceden belirlenmiş bir hızda (<strong>Baud Rate</strong>) çalışmalıdır.</li>
+<li><strong>Veri Çerçeveleme:</strong> İletilen her veri baytı, iletişimin başlangıcını (<strong>Start Bit</strong>) ve sonunu (<strong>Stop Bit</strong>) belirten ek bitlerle çevrelenir.</li>
+<li><strong>Hız:</strong> <strong>En Yavaş</strong>. Tipik hızlar 9600, 115200 Baud gibi düşük hızlardır.</li>
+</ul>
+<h3 id="pinler-ve-gorevleri_2">Pinler ve Görevleri</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pin</th>
+<th style="text-align: left;">Görev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TX</strong></td>
+<td style="text-align: left;"><strong>T</strong>ransmit (Gönderim). Veri gönderilen hat.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RX</strong></td>
+<td style="text-align: left;"><strong>R</strong>eceive (Alım). Veri alınan hat.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Önemli Not</strong></td>
+<td style="text-align: left;">Cihazlar arası çapraz bağlantı esastır: Cihaz A'nın <strong>TX</strong> pini, Cihaz B'nin <strong>RX</strong> pinine bağlanır.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kullanm-alanlar-ve-ornekler_2">Kullanım Alanları ve Örnekler</h3>
+<ul>
+<li>Basit, <strong>iki nokta arası</strong> ve genellikle daha <strong>uzun mesafeli</strong> iletişim.</li>
+<li><strong>Örnek Sensörler/Modüller:</strong><ul>
+<li><strong>NEO M8N GPS Modülü:</strong> Konum verilerini iletmek için.</li>
+<li><strong>LoRa İletişim Modülü:</strong> Uzun menzilli düşük güçlü kablosuz iletişim.</li>
+<li>Bluetooth (HC-05), WiFi (ESP-01) modülleri ve PC ile mikrodenetleyici arasındaki Seri Konsol iletişimi.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="4-protokollerin-karslastrmal-ozeti">4. Protokollerin Karşılaştırmalı Özeti ⚖️</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Özellik</th>
+<th style="text-align: left;">I²C</th>
+<th style="text-align: left;">SPI</th>
+<th style="text-align: left;">UART</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Haberleşme Şekli</strong></td>
+<td style="text-align: left;">Senkron (SCL)</td>
+<td style="text-align: left;">Senkron (SCK)</td>
+<td style="text-align: left;">Eşzamansız (Baud Rate)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pin Sayısı</strong></td>
+<td style="text-align: left;">2 (SDA, SCL)</td>
+<td style="text-align: left;">4 (MOSI, MISO, SCK, CS)</td>
+<td style="text-align: left;">2 (TX, RX)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hız</strong></td>
+<td style="text-align: left;">Orta</td>
+<td style="text-align: left;"><strong>En Hızlı</strong></td>
+<td style="text-align: left;">En Yavaş</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adresleme Gerekir mi?</strong></td>
+<td style="text-align: left;">Evet (7-bit)</td>
+<td style="text-align: left;">Hayır (CS Pini)</td>
+<td style="text-align: left;">Hayır (Noktadan Noktaya)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Avantaj</strong></td>
+<td style="text-align: left;">Az Pin, Çoklu Cihaz</td>
+<td style="text-align: left;">En Hızlı, Full-Duplex</td>
+<td style="text-align: left;">En Basit, Uzun Mesafe</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dezavantaj</strong></td>
+<td style="text-align: left;">Hız Sınırlı, Kompleks</td>
+<td style="text-align: left;">Çok Pin, Tek Master</td>
+<td style="text-align: left;">Veri Kaybı Riski (Senkronizasyon)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
